@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://s.yimg.jp/images/map/api/yolp/css/yolp_map.css?_v=1.9.4">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src=../static/app.js></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+            <title>Nozira Weather   (~o~)</title>
+        <script src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPVJ6RTliQjJyakptUiZzPWNvbnN1bWVyc2VjcmV0Jng9YTY-" type="text/javascript" charset="UTF-8"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+            <a href="" class="brand-logo" style="text-align: center;">HtW</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+            </div>
+        </nav>
+        <div class="collection">
+            <a href="#!" class="collection-item" style="width: 100%;height: 13%;">
+                <input id="lat" name="lat" value="" type="text" style="width: 100%;height: 45%;text-align: center;">
+                <input id="lng" name="lng" value="" type="text" style="width: 100%;height: 45%;text-align: center;">
+            </a>
+        </div>
+            <div id="map" style="width: 100%; height: 60%; position: relative; overflow: hidden; background: rgb(241, 241, 241) none repeat scroll 0% 0%;"></div>
+        </div>
+        <footer class="page-footer">
+                <div class="row" style="width: 100%;text-align: center;">
+                        <div class="col s1"></div>
+                        {% for num in message %}
+                        <div class="col s1">{{num}}</div>
+                        {% endfor %}
+                        <div class="col s1"></div>
+                      </div>
+            <div class="footer-copyright">※選択地点付近の１０日分の天気予報を表示するよ！</div>
+        </footer>    
+    </body>
+</html>
